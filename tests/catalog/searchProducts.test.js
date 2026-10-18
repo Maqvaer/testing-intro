@@ -3,6 +3,11 @@ const { searchProducts } = require('../../src/catalog');
 
 describe('searchProducts', () => {
   test.todo("'Наушники' возвращает товар с ID 1");
+   test('"Наушники" возвращает товар с ID 1',() => {
+    const result = searchProducts(products, 'Наушники');
+    expect(result).toStrictEqual([result[0]]);
+  })
+
   test.todo("'Чистый код' возвращает товар с ID 6");
   test.todo("'Настольная лампа' возвращает товар с ID 4");
   test.todo("'javascript' возвращает товар с ID 3");
