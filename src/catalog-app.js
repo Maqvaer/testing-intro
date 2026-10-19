@@ -1,3 +1,5 @@
+
+
 const formatPrice = (price) => `${(price / 100).toLocaleString('ru-RU')} ₽`;
 
 const catalogElement = document.querySelector('#catalog');
@@ -23,3 +25,6 @@ function renderCatalog() {
 
 [searchInput, categorySelect, sortSelect].forEach((element) => element.addEventListener('input', renderCatalog));
 renderCatalog();
+
+if (typeof module !== 'undefined') module.exports = categorySelect;
+if (typeof window !== 'undefined') window.categorySelect = categorySelect;
